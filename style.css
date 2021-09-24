@@ -1,0 +1,28 @@
+nav {
+    color: blue;
+    background-color: burlywood;
+    min-height: 40% ;
+
+}
+.time {
+    height: 20%;
+    /* display: flex; */
+    text-align: right;
+
+}
+
+.questions {
+    display: center
+
+}
+
+/* let resultsEl= 0;
+if (
+    usersinput == questions[round].answer){
+        alert("correct!!")
+        resultsEl++
+    }
+    else{
+        alert('Wrong')
+    }
+) */
