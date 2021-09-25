@@ -1,8 +1,5 @@
-nav {
-    color: blue;
-    background-color: burlywood;
-    min-height: 40% ;
-
+*{
+    font-family: Arial, Helvetica, sans-serif;
 }
 .time {
     height: 20%;
@@ -16,13 +13,12 @@ nav {
 
 }
 
-/* let resultsEl= 0;
-if (
-    usersinput == questions[round].answer){
-        alert("correct!!")
-        resultsEl++
-    }
-    else{
-        alert('Wrong')
-    }
-) */
+#title {
+color:blue
+}
+
+button {
+    color: blue;
+}
+
+

@@ -5,7 +5,7 @@ var timerEl= document.getElementById('timer')
 var round = 0
 var startEl = document.getElementById('startBtn')
 var submitEl = document.getElementById('SubmitBtn')
-var resultsEl = ""/4
+var resultsEl = document.getElementById('results')
 var c=0
 startEl.addEventListener('click',function (){
     questionEl.innerHTML= questions[round].question
@@ -79,19 +79,39 @@ optionsEl.addEventListener("click", function(event){
     if  (event.target.textContent== questions[round].answer){
         console.log ("true")
         // {c++}
+        setTimeout(function(){resultsEl.innerHTML="Correct";},1000);
+        document.body.style.backgroundColor=('green')
+
     }
 else {
     console.log("false")
     countDown= countDown -10
     //countDown=-10
+    setTimeout(function(){resultsEl.innerHTML="Wrong";},1000);
+
+    document.body.style.backgroundColor=("red")
+    
 }
 
-// submitEl.addEventListener('click', function() {
-//     resultsEl.textContent=`${c}`;
-
-// })
+// submitEl.addEventListener('click', function(event) {
+//     console.log(userInput)
+//     questionEl.innerHTML=""
+//     optionsEl.innerHTML=""
+// )}
 
     round++
+    if (round==4 ){
+        console.log('End')
+        questionEl.innerHTML=""
+        optionsEl.innerHTML=""
+        function myFunction() {
+            var x= document.getElementById("myText");
+
+        }
+
+    }
+    else {
+    
     questionEl.innerHTML= questions[round].question
     optionsEl.innerHTML=""
 
@@ -120,8 +140,10 @@ else {
         option3.setAttribute("id","btnFour")
         option3.innerHTML= questions[round].Options[3]
         optionsEl.append(option3)
+    }
         
     })
+
     
     var countdown = document.querySelector("#count7Down")
     var couuntdownInterval
